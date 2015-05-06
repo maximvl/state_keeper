@@ -1,0 +1,12 @@
+{application, state_keeper,
+ [
+  {description, "Keeps states between processes restarts"},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { state_keeper_app, []}},
+  {env, []}
+ ]}.
