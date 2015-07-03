@@ -53,8 +53,8 @@ init([]) ->
     er:obtain_e(?TAB),
     {ok, #state{}, hibernate}.
 
-handle_call({save, Key, State}, _From, State) ->
-    ets:insert(?TAB, {Key, State}),
+handle_call({save, Key, StateVal}, _From, State) ->
+    ets:insert(?TAB, {Key, StateVal}),
     {reply, ok, State, hibernate};
 
 handle_call(_Request, _From, State) ->
